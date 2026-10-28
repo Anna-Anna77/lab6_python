@@ -6,9 +6,12 @@
     <title>Архив статей</title>
 </head>
     <body class="archive">
+    <div class="header-top-links">
+    <a href="{% url 'register' %}" class="top-link">Регистрация</a>
+    </div>
     <div class="header">
         <a href="{% url 'create_post' %}" style="color: white; font-weight: bold; font-size: 20px;">+ Добавить статью</a>
-        <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" alt="Логотип блога" style="height: 50px;">
+        <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" alt="Логотип блога">
         <h1>Django public blog</h1>
     </div>
     <div class="archive">

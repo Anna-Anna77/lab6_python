@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Django Public Blog - Вход</title>
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="login-page">
+    <div class="auth-container">
+        <h1>Вход в систему</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Логин" value="{{ form.username }}">
+            <input type="password" name="password" placeholder="Пароль">
+            <input type="submit" value="Войти">
+        </form>
+        
+        {% if error %}
+            <div class="error-msg">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
